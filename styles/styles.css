@@ -1,7 +1,9 @@
 :root {
     font-size: 62.5%;
+    box-sizing: border-box;
 }
 
-#app {
-    height: 100vh;
+body {
+    font-size: 1.6rem;
+    background-color: rgb(122, 158, 159);
 }
