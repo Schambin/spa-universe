@@ -1,9 +1,51 @@
 :root {
     font-size: 62.5%;
+    font-family: sans-serif;
     box-sizing: border-box;
+
+    --txt-color: #E1E1E6;
 }
 
 body {
+    height: 100vh;
     font-size: 1.6rem;
     background-color: rgb(122, 158, 159);
+    color: var(--txt-color);
+}
+
+body nav {
+    margin: 4rem 0 4rem 7rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+}
+
+nav a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+.exploration {
+    height: 100vh;
+    background-image: url('../src/imgs/exploration.png');
+    background-size: 100vw 100vh
+}
+
+.home {
+    height: 100vh;
+
+    background-image: url('../src/imgs/home.png');
+    background-size: 100vw 100vh
+}
+
+.universe {
+    height: 100vh;
+
+    background-image: url('../src/imgs/mountains-universe02.png');
+    background-size: cover;
+    height: 100vh;
 }
