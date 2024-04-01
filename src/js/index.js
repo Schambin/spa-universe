@@ -1,8 +1,9 @@
 import { loadPageComponents } from "./load-components.js";
+import { activeNavbarItem } from "./check-active-item.js";
 
-const navbarItens = document.querySelectorAll('a');
+activeNavbarItem;
+const navbarItens = document.querySelectorAll('nav a');
 navbarItens.forEach(item => {
-    //click listener to each 'a' on navbar
     item.addEventListener('click', urlManipulator);
 });
 
