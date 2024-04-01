@@ -1,6 +1,6 @@
 :root {
     font-size: 62.5%;
-    font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 
     --txt-color: #E1E1E6;
@@ -8,9 +8,14 @@
 
 body {
     height: 100vh;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     background-color: rgb(122, 158, 159);
     color: var(--txt-color);
+}
+
+.mainPage h1{
+    font-size: 2.8rem;
+    font-weight: 600;
 }
 
 body nav {
@@ -33,20 +38,7 @@ nav a {
     color: var(--txt-color);
 }
 
-.explorationBox {
-    height: 100vh;
-    width: 100vw;
-
-    background-image: url('../src/imgs/exploration.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    display: grid;
-    place-content: center;
-}
-
-.homeBox {
+.homeBox, body{
     height: 100vh;
     width: 100vw;
 
@@ -57,6 +49,36 @@ nav a {
 
     display: grid;
     place-content: center;
+}
+
+.homeContent {
+    text-align: center;
+}
+
+.homeContent h1 {
+    font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 125%;
+    margin-bottom: 2.4rem;
+}
+
+.homeContent button {
+    padding: 2.2rem 3.2rem;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease-out;
+}
+
+.homeContent button:hover {
+    transition: background-color .3s ease-in;
+    background-color: white;
+    color: black;
 }
 
 .universeBox {
@@ -70,4 +92,45 @@ nav a {
     
     display: grid;
     place-content: center;
+}
+
+.universeContent {
+    margin: 0px 60rem 0px 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.universeContent h1, 
+.explorationContent h1{
+    line-height: 120%;
+    font-size: 4.8rem;
+    font-weight: bold;
+
+}
+
+.universeContent p,
+.explorationContent p{
+    line-height: 160%;
+    font-size: 1.8rem;
+}
+
+.explorationBox {
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url('../src/imgs/exploration.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: grid;
+    place-content: center;
+}
+
+.explorationContent {
+    margin: 0px 60rem 0px 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }

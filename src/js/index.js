@@ -1,40 +1,21 @@
-const placeToShowContent = document.getElementById('app');
+import { loadPageComponents } from "./load-components.js";
 
-const anchors = document.querySelectorAll('a');
-anchors.forEach(anchor => {
-    anchor.addEventListener('click', clickEventCatcher);
+const navbarItens = document.querySelectorAll('a');
+navbarItens.forEach(item => {
+    //click listener to each 'a' on navbar
+    item.addEventListener('click', urlManipulator);
 });
 
-function clickEventCatcher(event) {
+function urlManipulator(event) {
     event.preventDefault();
-    
-    const url = event.currentTarget.href;
-    const currentUrl = window.location.href;
 
-    //
+    const url = event.currentTarget.href;
+
+    // Remove '/pages' da URL
     const urlSegments = url.split('/');
     const lastSegment = urlSegments[urlSegments.length - 1];
 
     window.history.pushState({}, '', lastSegment);
-    
-    loadPageComponents(url, currentUrl);
-}
 
-
-function loadPageComponents(url) {
-    fetch(url)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Nao deu bom');
-        }
-        return response.text();
-    })
-    .then(html => {
-        placeToShowContent.innerHTML = html;
-    })
-    .catch(error => {
-        console.error('Problema no fetch:', error)
-    });
-
-    const bodyForBg = document.querySelector('body')
+    loadPageComponents(url);
 }
